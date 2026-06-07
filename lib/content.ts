@@ -74,9 +74,9 @@ export const content = {
       title2: 'Pełna odpowiedzialność.',
       p1: 'Każdy projekt, który przyjmuję, prowadzę osobiście — od pierwszej rozmowy przez projekt i kod, aż po wdrożenie. Jeden rozmówca z pełną odpowiedzialnością za wynik.',
       p2: 'Pracuję z nowoczesnym stackiem i korzystam z najlepszych dostępnych narzędzi — w tym AI. Nie po to, żeby ciąć koszty, ale żeby dostarczać szybciej bez kompromisów jakościowych.',
-      p3: 'Traktuję każdy projekt jak rzemiosło: logika ma być prosta, kod czytelny, a system ma działać bez problemów przez lata. Jakość nie jest opcją.',
+      p3: 'Traktuję każdy projekt jak rzemiosło: logika ma być prosta, kod czytelny, a system ma działać bez problemów przez lata.',
       facts: [
-        { key: 'LinkedIn', value: '/in/tomasz-cudzich', href: 'https://linkedin.com/in/tomasz-cudzich' },
+        { key: 'LinkedIn', value: '/in/tomaszcudzich', href: 'https://linkedin.com/in/tomaszcudzich' },
         { key: 'GitHub',   value: '@tcudzich',          href: 'https://github.com/tcudzich' },
       ],
     },
@@ -90,8 +90,8 @@ export const content = {
       title2: 'rozmowę.',
       desc: 'Masz pomysł na narzędzie, system do przebudowania albo stronę do dowiezienia? Napisz kilka zdań — odpowiem tego samego dnia.',
       links: [
-        { key: 'Email',    value: 'kontakt@cudzich.dev', href: 'mailto:kontakt@cudzich.dev' },
-        { key: 'LinkedIn', value: '/in/tomasz-cudzich',  href: 'https://linkedin.com/in/tomasz-cudzich' },
+        { key: 'Email',    value: 'tomasz.cudzich@icloud.com', href: 'mailto:tomasz.cudzich@icloud.com' },
+        { key: 'LinkedIn', value: '/in/tomaszcudzich',        href: 'https://linkedin.com/in/tomaszcudzich' },
       ],
       form: {
         name:    'Imię i nazwisko',
@@ -184,9 +184,9 @@ export const content = {
       title2: 'Full ownership.',
       p1: 'Every project I take on, I run personally — from the first conversation through design and code to deployment. One point of contact with full accountability for the outcome.',
       p2: 'I work with a modern stack and use the best tools available — including AI. Not to cut corners, but to deliver faster without sacrificing quality.',
-      p3: 'I treat every project as craft: simple logic, readable code, a system that runs without issues for years. Quality is not optional.',
+      p3: 'I treat every project as craft: simple logic, readable code, a system that runs without issues for years.',
       facts: [
-        { key: 'LinkedIn', value: '/in/tomasz-cudzich', href: 'https://linkedin.com/in/tomasz-cudzich' },
+        { key: 'LinkedIn', value: '/in/tomaszcudzich', href: 'https://linkedin.com/in/tomaszcudzich' },
         { key: 'GitHub',   value: '@tcudzich',          href: 'https://github.com/tcudzich' },
       ],
     },
@@ -200,8 +200,8 @@ export const content = {
       title2: 'a conversation.',
       desc: 'Got an idea for a tool, a system to rebuild, or a site to ship? Drop me a few lines — I reply the same day.',
       links: [
-        { key: 'Email',    value: 'kontakt@cudzich.dev', href: 'mailto:kontakt@cudzich.dev' },
-        { key: 'LinkedIn', value: '/in/tomasz-cudzich',  href: 'https://linkedin.com/in/tomasz-cudzich' },
+        { key: 'Email',    value: 'tomasz.cudzich@icloud.com', href: 'mailto:tomasz.cudzich@icloud.com' },
+        { key: 'LinkedIn', value: '/in/tomaszcudzich',        href: 'https://linkedin.com/in/tomaszcudzich' },
       ],
       form: {
         name:    'Full name',
