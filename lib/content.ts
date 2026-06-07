@@ -74,7 +74,7 @@ export const content = {
       title2: 'Pełna odpowiedzialność.',
       p1: 'Każdy projekt, który przyjmuję, prowadzę osobiście — od pierwszej rozmowy przez projekt i kod, aż po wdrożenie. Jeden rozmówca z pełną odpowiedzialnością za wynik.',
       p2: 'Pracuję z nowoczesnym stackiem i korzystam z najlepszych dostępnych narzędzi — w tym AI. Nie po to, żeby ciąć koszty, ale żeby dostarczać szybciej bez kompromisów jakościowych.',
-      p3: 'Traktuję każdy projekt jak rzemiosło: logika ma być prosta, kod czytelny, a system ma działać bez problemów przez lata. Wolę odmówić, niż zrobić coś byle jak.',
+      p3: 'Traktuję każdy projekt jak rzemiosło: logika ma być prosta, kod czytelny, a system ma działać bez problemów przez lata. Jakość nie jest opcją.',
       facts: [
         { key: 'LinkedIn', value: '/in/tomasz-cudzich', href: 'https://linkedin.com/in/tomasz-cudzich' },
         { key: 'GitHub',   value: '@tcudzich',          href: 'https://github.com/tcudzich' },
@@ -184,7 +184,7 @@ export const content = {
       title2: 'Full ownership.',
       p1: 'Every project I take on, I run personally — from the first conversation through design and code to deployment. One point of contact with full accountability for the outcome.',
       p2: 'I work with a modern stack and use the best tools available — including AI. Not to cut corners, but to deliver faster without sacrificing quality.',
-      p3: 'I treat every project as craft: the logic should be simple, the code readable, and the system should run without issues for years. I\'d rather turn something down than deliver it half-heartedly.',
+      p3: 'I treat every project as craft: simple logic, readable code, a system that runs without issues for years. Quality is not optional.',
       facts: [
         { key: 'LinkedIn', value: '/in/tomasz-cudzich', href: 'https://linkedin.com/in/tomasz-cudzich' },
         { key: 'GitHub',   value: '@tcudzich',          href: 'https://github.com/tcudzich' },
