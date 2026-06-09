@@ -45,10 +45,7 @@ export default function Hero({ lang }: { lang: Lang }) {
         </div>
 
       </div>
-      <div className="scroll-hint">
-        <span className="bar" />
-        <span>{t.scroll}</span>
-      </div>
+
     </section>
   );
 }
