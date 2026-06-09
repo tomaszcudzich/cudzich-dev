@@ -54,13 +54,18 @@ export const content = {
     projects: {
       tag: 'Realizacje',
       title: 'Wdrożone i działające',
+      viewProject: 'Zobacz projekt',
       items: [
         {
+          slug: 'magazyn-opon',
           flag: 'Live · Produkcja · Maj 2026',
           name: 'Magazyn Opon',
-          desc: 'System do zarządzania flotą 120 pojazdów dla zakładu mięsnego. Pełna kontrola nad oponami, przeglądami i kosztami eksploatacji — w jednym miejscu, dostępna z każdego urządzenia. Działa produkcyjnie od maja 2026.',
+          desc: 'System do zarządzania flotą 120 pojazdów dla zakładu mięsnego. Pełna kontrola nad oponami, przeglądami i kosztami eksploatacji — w jednym miejscu, dostępna z każdego urządzenia.',
+          longDesc: 'System flotowy zbudowany dla zakładu mięsnego zarządzającego 120 pojazdami. Przed wdrożeniem firma prowadziła ewidencję opon, przeglądów i historii napraw w arkuszach Excel — co generowało błędy, przegapione terminy i brak widoczności kosztów per pojazd.\n\nNowa aplikacja zastąpiła arkusze jednym spójnym interfejsem dostępnym z każdego urządzenia. Mechanik i kierownik floty mogą w kilka sekund sprawdzić stan dowolnego pojazdu, zaplanować wymianę opon i przeanalizować wydatki w czasie.',
           pills: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
           link: 'Zapytaj o szczegóły wdrożenia',
+          liveUrl: 'https://magazyn-opon.vercel.app',
+          screenshots: [] as string[],
           stats: [
             { num: '120', label: 'Pojazdów w systemie' },
             { num: '0',   label: 'Przestojów od startu' },
@@ -164,13 +169,18 @@ export const content = {
     projects: {
       tag: 'Selected work',
       title: 'Deployed and running',
+      viewProject: 'View project',
       items: [
         {
+          slug: 'magazyn-opon',
           flag: 'Live · Production · May 2026',
           name: 'Magazyn Opon',
-          desc: 'A fleet management system for 120 vehicles at a meat-processing plant. Full oversight of tyres, inspections and running costs — in one place, accessible from any device. Running in production since May 2026.',
+          desc: 'A fleet management system for 120 vehicles at a meat-processing plant. Full oversight of tyres, inspections and running costs — in one place, accessible from any device.',
+          longDesc: 'A fleet management system built for a meat-processing plant operating 120 vehicles. Before the implementation, the company tracked tyres, inspections and repair history in spreadsheets — leading to errors, missed deadlines and no visibility into per-vehicle costs.\n\nThe new application replaced the spreadsheets with a single, consistent interface accessible from any device. The mechanic and fleet manager can check the status of any vehicle in seconds, plan tyre changes and analyse expenditure over time.',
           pills: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
           link: 'Ask about the deployment',
+          liveUrl: 'https://magazyn-opon.vercel.app',
+          screenshots: [] as string[],
           stats: [
             { num: '120', label: 'Vehicles in system' },
             { num: '0',   label: 'Downtime since launch' },

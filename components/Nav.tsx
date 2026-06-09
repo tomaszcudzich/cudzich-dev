@@ -6,9 +6,10 @@ import { content, Lang } from '@/lib/content';
 interface NavProps {
   lang: Lang;
   onLangChange: (l: Lang) => void;
+  prefix?: string;
 }
 
-export default function Nav({ lang, onLangChange }: NavProps) {
+export default function Nav({ lang, onLangChange, prefix = '' }: NavProps) {
   const t = content[lang].nav;
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,17 +22,17 @@ export default function Nav({ lang, onLangChange }: NavProps) {
   }, []);
 
   const links = [
-    { href: '#uslugi',  label: t.services },
-    { href: '#projekty', label: t.work },
-    { href: '#o-mnie',  label: t.about },
-    { href: '#stack',   label: t.stack },
-    { href: '#kontakt', label: t.contact },
+    { href: `${prefix}#uslugi`,  label: t.services },
+    { href: `${prefix}#projekty`, label: t.work },
+    { href: `${prefix}#o-mnie`,  label: t.about },
+    { href: `${prefix}#stack`,   label: t.stack },
+    { href: `${prefix}#kontakt`, label: t.contact },
   ];
 
   return (
     <header className={`nav${scrolled ? ' scrolled' : ''}`} id="nav">
       <div className="wrap nav__inner">
-        <a className="logo" href="#top" aria-label="Tomasz Cudzich — Software Engineer">
+        <a className="logo" href={`${prefix}#top`} aria-label="Tomasz Cudzich — Software Engineer">
           <span className="logo__diamond"><span>TC</span></span>
           <span className="logo__text">
             <span className="logo__name">Tomasz Cudzich</span>
