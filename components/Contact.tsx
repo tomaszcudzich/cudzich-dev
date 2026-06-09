@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import { content, Lang } from '@/lib/content';
 
 // Po rejestracji na formspree.io wstaw swój form ID:
-const FORMSPREE_ID = 'TODO_REPLACE_WITH_FORMSPREE_ID';
+const FORMSPREE_ID = 'mzdqvpoz';
 
 interface ContactProps {
   lang: Lang;
