@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { content, Lang } from '@/lib/content';
 import Nav from './Nav';
@@ -8,6 +8,7 @@ import Footer from './Footer';
 
 export default function ProjectDetail({ slug }: { slug: string }) {
   const [lang, setLang] = useState<Lang>('pl');
+  const [lightbox, setLightbox] = useState<string | null>(null);
 
   useEffect(() => {
     try {
@@ -37,6 +38,19 @@ export default function ProjectDetail({ slug }: { slug: string }) {
     return () => io.disconnect();
   }, [lang]);
 
+  const closeLightbox = useCallback(() => setLightbox(null), []);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') closeLightbox(); };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [lightbox, closeLightbox]);
+
   function handleLangChange(l: Lang) {
     setLang(l);
     try { localStorage.setItem('tc-lang', l); } catch {}
@@ -50,9 +64,15 @@ export default function ProjectDetail({ slug }: { slug: string }) {
     <>
       <Nav lang={lang} onLangChange={handleLangChange} prefix="/" />
       <main>
+        {/* Hero — screenshot w ramce na ciemnym tle */}
         <div className="proj-detail__hero">
           {project.screenshots[0] ? (
-            <img src={project.screenshots[0]} alt={project.name} className="proj-detail__hero-img" />
+            <img
+              src={project.screenshots[0]}
+              alt={project.name}
+              className="proj-detail__hero-img"
+              onClick={() => setLightbox(project.screenshots[0])}
+            />
           ) : (
             <div className="proj-detail__hero-ph">
               <span className="proj-detail__hero-name">{project.name}</span>
@@ -111,7 +131,14 @@ export default function ProjectDetail({ slug }: { slug: string }) {
               </p>
               <div className="proj-detail__screens-grid">
                 {project.screenshots.map((src, i) => (
-                  <img key={i} src={src} alt={`${project.name} screenshot ${i + 1}`} className="proj-detail__screen" />
+                  <button
+                    key={i}
+                    className="proj-detail__screen-btn"
+                    onClick={() => setLightbox(src)}
+                    aria-label={`${project.name} screenshot ${i + 1}`}
+                  >
+                    <img src={src} alt={`${project.name} screenshot ${i + 1}`} className="proj-detail__screen" />
+                  </button>
                 ))}
               </div>
             </div>
@@ -126,6 +153,19 @@ export default function ProjectDetail({ slug }: { slug: string }) {
         </div>
       </main>
       <Footer lang={lang} />
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div className="lightbox" onClick={closeLightbox} role="dialog" aria-modal="true">
+          <button className="lightbox__close" onClick={closeLightbox} aria-label="Zamknij">✕</button>
+          <img
+            src={lightbox}
+            alt="Podgląd"
+            className="lightbox__img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </>
   );
 }
