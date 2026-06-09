@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { content, Lang } from '@/lib/content';
 
 // Po rejestracji na formspree.io wstaw swój form ID:
@@ -23,6 +23,10 @@ export default function Contact({ lang }: ContactProps) {
   const handleBlur = (name: string, value: string) => {
     if (!value) setFocused((s) => ({ ...s, [name]: false }));
   };
+
+  useEffect(() => {
+    if (status === 'sent') formRef.current?.classList.add('is-visible');
+  }, [status]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
