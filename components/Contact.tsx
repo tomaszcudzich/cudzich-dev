@@ -30,10 +30,6 @@ export default function Contact({ lang }: ContactProps) {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (FORMSPREE_ID === 'TODO_REPLACE_WITH_FORMSPREE_ID') {
-      setStatus('sent');
-      return;
-    }
     const data = new FormData(e.currentTarget);
     setStatus('sending');
     try {
