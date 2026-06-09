@@ -80,16 +80,6 @@ export default function ProjectDetail({ slug }: { slug: string }) {
               {project.longDesc.split('\n\n').map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
-              {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn--gold proj-detail__live"
-                >
-                  {lang === 'pl' ? 'Otwórz aplikację' : 'Open app'} <span className="arrow">→</span>
-                </a>
-              )}
             </div>
 
             <aside className="proj-detail__aside reveal" style={{ ['--reveal-delay' as string]: '80ms' }}>
