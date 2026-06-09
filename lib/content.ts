@@ -65,7 +65,12 @@ export const content = {
           pills: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
           link: 'Zapytaj o szczegóły wdrożenia',
           liveUrl: 'https://magazyn-opon.vercel.app',
-          screenshots: [] as string[],
+          screenshots: [
+            '/projekty/magazyn-opon/01_dashboard.png',
+            '/projekty/magazyn-opon/02_pojazdy.png',
+            '/projekty/magazyn-opon/03_komplety_opon.png',
+            '/projekty/magazyn-opon/05_dodaj_pojazd.png',
+          ],
           stats: [
             { num: '120', label: 'Pojazdów w systemie' },
             { num: '0',   label: 'Przestojów od startu' },
@@ -180,7 +185,12 @@ export const content = {
           pills: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
           link: 'Ask about the deployment',
           liveUrl: 'https://magazyn-opon.vercel.app',
-          screenshots: [] as string[],
+          screenshots: [
+            '/projekty/magazyn-opon/01_dashboard.png',
+            '/projekty/magazyn-opon/02_pojazdy.png',
+            '/projekty/magazyn-opon/03_komplety_opon.png',
+            '/projekty/magazyn-opon/05_dodaj_pojazd.png',
+          ],
           stats: [
             { num: '120', label: 'Vehicles in system' },
             { num: '0',   label: 'Downtime since launch' },
